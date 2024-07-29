@@ -1,44 +1,24 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
-    | Default Option Store
+    | Default disk
     |--------------------------------------------------------------------------
     |
-    | This option controls the default option connection that gets used while
-    | using this caching library. This connection is used when another is
-    | not explicitly specified when executing a given caching function.
-    |
-    | Supported:  "database", "file"
+    | This is the default disk that will be used to store the options file.
     |
     */
 
-    'default' => env('OPTION_DRIVER', 'file'),
-
+    'disk' => 'local',
     /*
     |--------------------------------------------------------------------------
-    | Option Stores
+    | Default filename
     |--------------------------------------------------------------------------
     |
-    | Here you may define all of the option "stores" for your application as
-    | well as their drivers. You may even define multiple stores for the
-    | same option driver to group types of items stored in your options.
+    | This is the default filename for the options file.
     |
     */
 
-    'stores' => [
-        'database' => [
-            'driver' => 'database',
-            'table' => 'options',
-            'connection' => null,
-        ],
-
-        'file' => [
-            'driver' => 'file',
-            'path' => storage_path('framework/app/options'),
-            'single_file' => true,
-        ],
-    ],
+    'filename' => 'options.json',
 ];

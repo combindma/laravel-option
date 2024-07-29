@@ -11,7 +11,6 @@ class OptionServiceProvider extends PackageServiceProvider
     {
         $package
             ->name('laravel-option')
-            ->hasConfigFile('option')
-            ->hasMigration('create_options_table');
+            ->hasConfigFile('option');
     }
 }
